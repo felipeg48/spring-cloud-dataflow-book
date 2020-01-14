@@ -1,6 +1,0 @@
-
-CREATE TABLE person (
-   email VARCHAR(100) NOT NULL PRIMARY KEY,
-   name VARCHAR(100) NOT NULL,
-   phone VARCHAR(20) NOT NULL,
-);
