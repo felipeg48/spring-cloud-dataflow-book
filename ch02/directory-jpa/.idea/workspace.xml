@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="80a25a2a-cde4-49fc-99b1-90185fbf6ff7" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="xjVtQfpP" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1V5Cadmh74ETapoS08fvfDGWQJx" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
+  <component name="RunManager" selected="Smart Tomcat.directory-jpa-deploy">
+    <configuration name="Deploy" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="war:war" />
+                <option value="org.codehaus.mojo:wagon-maven-plugin:upload-single" />
+                <option value="-Dwagon.fromFile=$PROJECT_DIR$/targhet/directory.war" />
+                <option value="-Dwagon.url=file:///user/local/Cellar/tomcat/9.0.30/libexec/webapps/" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map>
+                <entry key="default" value="true" />
+              </map>
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="Debug" type="Remote">
+      <module name="directory-jpa" />
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="8000" />
+      <option name="AUTO_RESTART" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="directory-jpa-deploy" type="com.poratu.idea.plugins.tomcat" factoryName="SMART_TOMCAT_FACTORY" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="adminPort" value="8005" />
+      <option name="ajpPort" value="8009" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="contextPath" value="/directory-jpa" />
+      <option name="customContext" value="" />
+      <option name="docBase" value="$PROJECT_DIR$/src/main/webapp" />
+      <option name="envOptions">
+        <map />
+      </option>
+      <option name="moduleName" />
+      <option name="passParentEnvironmentVariables" value="true" />
+      <option name="port" value="8080" />
+      <option name="tomcatInfo">
+        <TomcatInfo>
+          <option name="name" value="Apache Tomcat 9.0.30" />
+          <option name="number" value="0" />
+          <option name="path" value="/usr/local/Cellar/tomcat/9.0.30/libexec" />
+          <option name="version" value="9.0.30.0" />
+        </TomcatInfo>
+      </option>
+      <option name="vmOptions" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Maven.Deploy" />
+      <item itemvalue="Remote.Debug" />
+      <item itemvalue="Smart Tomcat.directory-jpa-deploy" />
+    </list>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="80a25a2a-cde4-49fc-99b1-90185fbf6ff7" name="Default Changelist" comment="" />
+      <created>1576533634300</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576533634300</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="108" y="108" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578938583603">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="108" y="108" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578938583603" />
+    <state x="289" y="126" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.3840.1057@0.23.3840.1057" timestamp="1577201868862" />
+    <state x="533" y="152" key="#com.intellij.ide.util.MemberChooser" timestamp="1576534430035">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="533" y="152" key="#com.intellij.ide.util.MemberChooser/0.23.1440.877@0.23.1440.877" timestamp="1576534430035" />
+    <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578937596341">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="408" y="204" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578937596341" />
+    <state x="511" y="298" width="458" height="475" key="#com.intellij.tools.ToolEditorDialog" timestamp="1577201284538">
+      <screen x="0" y="23" width="3840" height="1057" />
+    </state>
+    <state x="511" y="298" width="458" height="475" key="#com.intellij.tools.ToolEditorDialog/0.23.3840.1057@0.23.3840.1057" timestamp="1577201284538" />
+    <state width="1322" height="169" key="GridCell.Tab.0.bottom" timestamp="1579034028505">
+      <screen x="-1366" y="0" width="1366" height="1024" />
+    </state>
+    <state width="1396" height="169" key="GridCell.Tab.0.bottom/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578947864834" />
+    <state width="1322" height="169" key="GridCell.Tab.0.bottom/0.23.1440.877/-1366.0.1366.1024@-1366.0.1366.1024" timestamp="1579034028505" />
+    <state width="1322" height="169" key="GridCell.Tab.0.center" timestamp="1579034028504">
+      <screen x="-1366" y="0" width="1366" height="1024" />
+    </state>
+    <state width="1396" height="169" key="GridCell.Tab.0.center/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578947864832" />
+    <state width="1322" height="169" key="GridCell.Tab.0.center/0.23.1440.877/-1366.0.1366.1024@-1366.0.1366.1024" timestamp="1579034028504" />
+    <state width="1322" height="169" key="GridCell.Tab.0.left" timestamp="1579034028503">
+      <screen x="-1366" y="0" width="1366" height="1024" />
+    </state>
+    <state width="1396" height="169" key="GridCell.Tab.0.left/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578947864831" />
+    <state width="1322" height="169" key="GridCell.Tab.0.left/0.23.1440.877/-1366.0.1366.1024@-1366.0.1366.1024" timestamp="1579034028503" />
+    <state width="1322" height="169" key="GridCell.Tab.0.right" timestamp="1579034028504">
+      <screen x="-1366" y="0" width="1366" height="1024" />
+    </state>
+    <state width="1396" height="169" key="GridCell.Tab.0.right/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578947864833" />
+    <state width="1322" height="169" key="GridCell.Tab.0.right/0.23.1440.877/-1366.0.1366.1024@-1366.0.1366.1024" timestamp="1579034028504" />
+    <state x="258" y="123" key="Maven.ArtifactSearchDialog" timestamp="1576534767902">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="258" y="123" key="Maven.ArtifactSearchDialog/0.23.1440.877@0.23.1440.877" timestamp="1576534767902" />
+    <state x="93" y="63" key="SettingsEditor" timestamp="1578938854234">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="93" y="63" key="SettingsEditor/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578938854234" />
+    <state x="249" y="100" key="SettingsEditor/0.23.3840.1057@0.23.3840.1057" timestamp="1577201736655" />
+    <state x="376" y="294" key="com.intellij.ide.util.TipDialog" timestamp="1578937757875">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="376" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578937757875" />
+    <state x="376" y="294" key="com.intellij.ide.util.TipDialog/0.23.1440.877@0.23.1440.877" timestamp="1576533644819" />
+    <state x="379" y="95" width="681" height="732" key="find.popup" timestamp="1578947315807">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="379" y="95" width="681" height="732" key="find.popup/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578947315807" />
+    <state x="385" y="213" key="search.everywhere.popup" timestamp="1578940050777">
+      <screen x="0" y="23" width="1440" height="877" />
+    </state>
+    <state x="385" y="213" key="search.everywhere.popup/0.23.1440.877/-1280.0.1280.960@0.23.1440.877" timestamp="1578940050777" />
+    <state x="385" y="213" key="search.everywhere.popup/0.23.1440.877@0.23.1440.877" timestamp="1576533909794" />
+  </component>
+</project>
