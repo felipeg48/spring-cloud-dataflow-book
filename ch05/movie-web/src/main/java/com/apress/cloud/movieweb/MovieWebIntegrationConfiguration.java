@@ -9,6 +9,7 @@ import org.springframework.integration.annotation.ServiceActivator;
 import org.springframework.integration.dsl.IntegrationFlow;
 import org.springframework.integration.dsl.IntegrationFlows;
 import org.springframework.integration.dsl.MessageChannels;
+import org.springframework.integration.dsl.context.IntegrationFlowContext;
 import org.springframework.integration.handler.LoggingHandler;
 import org.springframework.integration.http.dsl.Http;
 import org.springframework.integration.jdbc.JdbcMessageHandler;
@@ -22,6 +23,8 @@ import javax.sql.DataSource;
 public class MovieWebIntegrationConfiguration {
 
     private MovieWebProperties movieWebProperties;
+    private IntegrationFlowContext integrationFlowContext;
+
 
     @Bean
     public IntegrationFlow httpFlow() {

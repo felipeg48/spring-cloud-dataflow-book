@@ -1,10 +1,6 @@
+server:
+  port: 8181
+
 spring:
   application:
     name: movie-web
-  h2:
-    console:
-      enabled: true
-  cloud:
-    config:
-      uri:
-        - http://localhost:8888

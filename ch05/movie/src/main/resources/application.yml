@@ -1,6 +1,8 @@
 spring:
   application:
     name: movies
+  jmx:
+    enabled: true
   cloud:
     config:
       uri:

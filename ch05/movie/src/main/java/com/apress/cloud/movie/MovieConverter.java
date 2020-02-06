@@ -14,7 +14,7 @@ public class MovieConverter implements Converter<String,Movie> {
 
     @Override
     public Movie convert(String source) {
-        log.info(source);
+        log.debug(source);
         List<String> fields = Stream.of(source.split(",")).map(String::trim).collect(Collectors.toList());
         return new Movie(fields.get(0),fields.get(1),Integer.valueOf(fields.get(2)));
     }
