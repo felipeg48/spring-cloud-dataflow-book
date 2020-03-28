@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 @Component
-public class MovieTransformer implements Converter<String,Movie> {
+public class MovieConverter implements Converter<String,Movie> {
     @Override
     public Movie convert(String s) {
         List<String> fields = Stream.of(s.split(",")).map(String::trim).collect(Collectors.toList());

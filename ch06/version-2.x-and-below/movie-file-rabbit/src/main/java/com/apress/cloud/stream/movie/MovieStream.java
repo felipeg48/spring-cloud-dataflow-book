@@ -1,7 +1,6 @@
 package com.apress.cloud.stream.movie;
 
 import lombok.AllArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
@@ -22,7 +21,7 @@ import java.io.File;
 public class MovieStream {
 
     private MovieStreamProperties movieStreamProperties;
-    private MovieTransformer movieTransformer;
+    private MovieConverter movieConverter;
 
     @Bean
     public IntegrationFlow fileFlow(){
@@ -34,7 +33,7 @@ public class MovieStream {
 
                 .split(Files.splitter().markers())
                 .filter(p -> !(p instanceof FileSplitter.FileMarker))
-                .transform(Transformers.converter(movieTransformer))
+                .transform(Transformers.converter(movieConverter))
                 .transform(Transformers.toJson())
                 .channel(Source.OUTPUT)
                 .get();
