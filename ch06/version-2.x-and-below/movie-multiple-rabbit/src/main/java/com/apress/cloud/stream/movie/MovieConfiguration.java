@@ -18,7 +18,8 @@ public class MovieConfiguration {
         return new SpelFunctionFactoryBean(JsonPathUtils.class, "evaluate");
     }
 
-    /**
+    // Uncomment to send message to the movie channel.
+    /*
     @Bean
     public ApplicationRunner sendMovies(MovieGenre movieGenre){
         return args -> {
