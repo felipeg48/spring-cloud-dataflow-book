@@ -39,4 +39,37 @@ public class MovieStream {
                 .get();
     }
 
+
+    // Another ways to send Messages to the Source.OUTPUT
+    /*
+    @Bean
+    @InboundChannelAdapter(value = Source.OUTPUT, poller = @Poller(fixedRate = "5000", maxMessagesPerPoll = "1"))
+    public MessageSource<Movie> movieMessageSource() {
+        return () -> new GenericMessage<>(new Movie("The Matrix","Keanu Reeves",1999));
+    }
+    */
+
+    /*
+    @Bean
+    public ApplicationRunner movieMessage(Source source){
+        return args -> {
+            source.output().send(new GenericMessage<>(new Movie("The Matrix","Keanu Reeves",1999)));
+        };
+    }
+    */
 }
+
+
+/*
+// # Add the following property to the application.properties file:
+// # ONLY: Binding when using Spring Cloud Function - Suplier
+// spring.cloud.stream.bindings.movieSupplier-out-0.destination=movie
+
+@Configuration
+public class MovieStream {
+    @Bean  // Every second will send this movie.
+    public Supplier<Movie> movieSupplier() {
+        return () -> new Movie("The Matrix", "Keanu Reves", 1999);
+    }
+}
+*/
