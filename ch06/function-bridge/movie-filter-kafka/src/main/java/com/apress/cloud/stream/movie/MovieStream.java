@@ -72,7 +72,7 @@ public class MovieStream {
     public IntegrationFlow uppercaseFlow() {
         return IntegrationFlows.from(MovieFunction.class)
                 .transform(Transformers.toJson())
-                .channel(Source.OUTPUT)
+                .channel("a-new-channel")
                 .get();
     }
     public interface MovieFunction extends Function<Message<Movie>, Message<Movie>> { }
