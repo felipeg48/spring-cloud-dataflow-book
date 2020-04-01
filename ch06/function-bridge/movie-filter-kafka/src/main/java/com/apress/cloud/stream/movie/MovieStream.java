@@ -1,14 +1,8 @@
 package com.apress.cloud.stream.movie;
 
-import org.springframework.boot.ApplicationRunner;
-import org.springframework.boot.CommandLineRunner;
-import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.messaging.Message;
-import org.springframework.messaging.support.MessageBuilder;
 import reactor.core.publisher.Flux;
-import reactor.util.function.Tuple2;
 
 import java.util.function.Function;
 
@@ -22,6 +16,7 @@ public class MovieStream {
         return flux -> flux.filter( movie -> movie.getGenre().equals(GENRE_SCIENCE_FICTION));
     }
 }
+
 
 
 //Using Function Composition
@@ -47,6 +42,7 @@ public class MovieStream {
 */
 
 
+
 //Example with multiple input arguments
 /*
 @Configuration
@@ -63,5 +59,22 @@ public class MovieStream {
                     MessageBuilder.withPayload(movieFlux.blockFirst()).setHeader("stars",integerFlux.map(m -> m.toString())).build());
         };
     }
+}
+*/
+
+
+
+// When going from Reactive to Spring Integration.
+/*
+@Configuration
+public class MovieStream {
+    @Bean
+    public IntegrationFlow uppercaseFlow() {
+        return IntegrationFlows.from(MovieFunction.class)
+                .transform(Transformers.toJson())
+                .channel(Source.OUTPUT)
+                .get();
+    }
+    public interface MovieFunction extends Function<Message<Movie>, Message<Movie>> { }
 }
 */
