@@ -69,12 +69,12 @@ public class MovieStream {
 @Configuration
 public class MovieStream {
     @Bean
-    public IntegrationFlow uppercaseFlow() {
+    public IntegrationFlow movieFlow() {
         return IntegrationFlows.from(MovieFunction.class)
                 .transform(Transformers.toJson())
-                .channel("a-new-channel")
+                .channel(Source.OUTPUT)
                 .get();
     }
-    public interface MovieFunction extends Function<Message<Movie>, Message<Movie>> { }
+    public interface MovieFunction extends Function<Movie, Movie> { }
 }
 */
