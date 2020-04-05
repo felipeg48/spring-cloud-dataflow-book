@@ -23,7 +23,7 @@ public class NatsStream {
 
     @StreamListener(Sink.INPUT)
     public void process(Object message){
-        log.info("Processed Class: {}", message.getClass().getName());
-        log.info("Processed: {}", message);
+        log.info("Received and ProcessedClass: {}", message.getClass().getName());
+        log.info("Received and Processed: {}", message);
     }
 }

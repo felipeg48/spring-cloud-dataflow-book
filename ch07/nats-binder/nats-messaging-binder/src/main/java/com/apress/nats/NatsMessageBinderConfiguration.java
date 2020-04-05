@@ -1,13 +1,12 @@
 package com.apress.nats;
 
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.io.IOException;
+import org.springframework.context.annotation.Import;
 
 @EnableConfigurationProperties(NatsProperties.class)
+@Import(NatsConfiguration.class)
 @Configuration
 public class NatsMessageBinderConfiguration {
 
@@ -20,17 +19,5 @@ public class NatsMessageBinderConfiguration {
     @Bean
     public NatsMessageBinder natsMessageBinder(NatsMessageBinderProvisioningProvider natsMessageBinderProvisioningProvider, NatsTemplate natsTemplate){
         return new NatsMessageBinder(null,natsMessageBinderProvisioningProvider, natsTemplate);
-    }
-
-    @Bean
-    @ConditionalOnMissingBean
-    public NatsConnection natsConnection(NatsProperties natsProperties) throws IOException, InterruptedException {
-        return new NatsConnection(natsProperties);
-    }
-
-    @Bean
-    @ConditionalOnMissingBean
-    public NatsTemplate natsTemplate(NatsConnection natsConnection){
-        return new NatsTemplate(natsConnection);
     }
 }
