@@ -43,18 +43,7 @@
 			<artifactId>spring-cloud-stream-test-support</artifactId>
 			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>com.apress.nats</groupId>
-			<artifactId>nats-messaging</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.apress.nats</groupId>
-			<artifactId>nats-messaging</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
-			<scope>compile</scope>
-		</dependency>
+
 	</dependencies>
 
 	<dependencyManagement>

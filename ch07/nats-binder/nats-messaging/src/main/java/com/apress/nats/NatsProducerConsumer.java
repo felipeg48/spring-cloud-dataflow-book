@@ -11,7 +11,7 @@ import java.nio.charset.StandardCharsets;
 @Configuration
 public class NatsProducerConsumer {
 
-
+	// This class is just for TESTING Purposes.
     /*
     @Bean(initMethod = "start",destroyMethod = "stop")
     public NatsMessageListenerAdapter natsMessageListenerAdapter(NatsConnection natsConnection){
