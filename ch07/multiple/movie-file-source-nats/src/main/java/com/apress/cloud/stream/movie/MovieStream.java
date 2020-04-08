@@ -35,3 +35,37 @@ public class MovieStream {
                 .get();
     }
 }
+
+
+// Programming Model 3.x
+// Yout need to have this property declared:
+// spring.cloud.stream.bindings.movie-out-0.destination=movie
+//
+
+/*
+@AllArgsConstructor
+@EnableConfigurationProperties(MovieStreamProperties.class)
+@Configuration
+public class MovieStream {
+
+    private MovieStreamProperties movieStreamProperties;
+
+    @Bean
+    public Publisher<Message<Movie>> fileFlow(){
+        return IntegrationFlows.from(Files
+                        .inboundAdapter(new File(this.movieStreamProperties.getDirectory()))
+                        .preventDuplicates(true)
+                        .patternFilter(this.movieStreamProperties.getNamePattern()),
+                e -> e.poller(Pollers.fixedDelay(5000L)))
+                .split(Files.splitter().markers())
+                .filter(p -> !(p instanceof FileSplitter.FileMarker))
+                .transform(Transformers.fromJson(Movie.class))
+                .toReactivePublisher();
+    }
+
+    @Bean
+    public Supplier<Publisher<Message<Movie>>> movie(){
+        return () -> fileFlow();
+    }
+}
+*/

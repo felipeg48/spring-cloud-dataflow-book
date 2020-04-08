@@ -1,4 +1,5 @@
 ## Yaml Properties
+## Programming Model 3.x
 # Binders
 #spring:
 #  cloud:
@@ -10,7 +11,23 @@
 #        onlyDrama-out-0:
 #          binder: rabbit
 #          destination: log
-#
+
+
+## With Spring Integration
+## Programming Model 2.x
+spring:
+  cloud:
+    stream:
+      bindings:
+        input:
+          binder: nats
+          destination: movie
+        output:
+          binder: rabbit
+          destination: log
+
+
+## Logging Level
 logging:
   level:
     com:
@@ -21,6 +38,7 @@ logging:
           stream:
             messaging:
               DirectWithAttributesChannel: DEBUG
+
 
 
 ## This is with application.properties and Function
@@ -35,16 +53,3 @@ logging:
 ## Logging
 #logging.level.com.apress=DEBUG
 #logging.level.org.springframework.cloud.stream.messaging.DirectWithAttributesChannel=DEBUG
-
-
-## With Spring Integration
-spring:
-  cloud:
-    stream:
-      bindings:
-        input:
-          binder: nats
-          destination: movie
-        output:
-          binder: rabbit
-          destination: log
