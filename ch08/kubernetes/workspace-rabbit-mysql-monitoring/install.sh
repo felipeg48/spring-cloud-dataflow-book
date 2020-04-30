@@ -58,7 +58,6 @@ else
 	 echo "\nSetting Grafana URL: $URL"
 	 EXPR="s|https://grafana:3000|"$URL"|"
 	 sed -e $EXPR server/server-config.yaml | kubectl create -f-
-	 kubectl create -f server/server-config.yaml
 fi
 
 if [ -z "$1" ]; then 
