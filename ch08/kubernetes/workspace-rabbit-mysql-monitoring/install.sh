@@ -25,6 +25,9 @@ echo '\n> Installing Grafana and Prometheus...\n'
 kubectl create -f prometheus/prometheus-clusterroles.yaml
 kubectl create -f prometheus/prometheus-clusterrolebinding.yaml
 kubectl create -f prometheus/prometheus-serviceaccount.yaml
+
+kubectl create -f prometheus-proxy/
+
 kubectl create -f prometheus/prometheus-configmap.yaml
 kubectl create -f prometheus/prometheus-deployment.yaml
 kubectl create -f prometheus/prometheus-service.yaml

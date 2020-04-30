@@ -14,6 +14,7 @@ kubectl delete -f grafana/
 kubectl delete -f prometheus/prometheus-service.yaml
 kubectl delete -f prometheus/prometheus-deployment.yaml
 kubectl delete -f prometheus/prometheus-configmap.yaml
+kubectl delete -f prometheus-proxy/
 kubectl delete -f prometheus/prometheus-serviceaccount.yaml
 kubectl delete -f prometheus/prometheus-clusterrolebinding.yaml
 kubectl delete -f prometheus/prometheus-clusterroles.yaml
