@@ -6,8 +6,9 @@ The versions used are:
 
 - Spring Cloud Data Flow: 2.4.2.RELEASE
 - Spring Cloud Skipper: 2.3.2.RELEASE
+- Grafana/Prometheus: 2.4.2.RELEASE
 
-1. Go into the folder and execute the following commands:
+1. Go into the folder (depending on your needs) and execute the following commands:
 
 - Start Up
 	```shell
@@ -38,7 +39,8 @@ The versions used are:
 	kubectl delete -f rabbitmq/
 	```
 
-> Each folder has the `install.sh` and `uninstall.sh` scripts.
+> Each folder has the `install.sh` and `uninstall.sh` scripts for convenience. You will required to have `jq` installed.
+  You can get it [here](https://stedolan.github.io/jq/).
 
 ## Minikube
 

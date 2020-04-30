@@ -9,7 +9,7 @@ spec:
   # If you are running k8s on a local dev box or using minikube, you can use type NodePort instead
   type: LoadBalancer
   ports:
-    - port: 8080
+    - port: 80
       targetPort: 80
       name: scdf-server
   selector:

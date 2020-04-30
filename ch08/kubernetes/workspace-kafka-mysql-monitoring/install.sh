@@ -17,8 +17,8 @@ else
 fi 
 
 echo '> Installing Spring Cloud Data Flow Server...\n'
-echo '> Installing RabbitMQ and MySQL...\n'
-kubectl create -f rabbitmq/
+echo '> Installing Kafka and MySQL...\n'
+kubectl create -f kafka/
 kubectl create -f mysql/
 
 echo '\n> Installing Grafana and Prometheus...\n'
@@ -42,7 +42,7 @@ echo '\n> Installing Service Roles and Skipper...\n'
 kubectl create -f server/server-roles.yaml
 kubectl create -f server/server-rolebinding.yaml
 kubectl create -f server/service-account.yaml
-kubectl create -f skipper/skipper-config-rabbit.yaml
+kubectl create -f skipper/skipper-config-kafka.yaml
 kubectl create -f skipper/skipper-deployment.yaml
 
 if [ "$answer" = "n" ]; then 

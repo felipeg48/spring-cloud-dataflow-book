@@ -16,8 +16,11 @@ else
 fi 
 
 echo '> Installing Spring Cloud Data Flow Server...\n'
+echo '> Installing RabbitMQ and MySQL...\n'
 kubectl create -f rabbitmq/
 kubectl create -f mysql/
+
+echo '> Installing Server Roles and Skipper...\n'
 kubectl create -f server/server-roles.yaml
 kubectl create -f server/server-rolebinding.yaml
 kubectl create -f server/service-account.yaml
