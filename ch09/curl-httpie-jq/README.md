@@ -9,8 +9,12 @@
 {"title":"Disturbia","actor":"Shia LaBeouf","year":2007,"genre":"drama","stars":3}
 ```
 
+## Maven Apps
+- Kafka - https://dataflow.spring.io/kafka-maven-latest
+- RabbitMQ - https://dataflow.spring.io/rabbitmq-maven-latest
+- Task - https://dataflow.spring.io/task-maven-latest
 
-## Registering 
+## Registering Apps 
 
 Using `localhost`:
 
