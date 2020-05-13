@@ -10,7 +10,10 @@
 ```
 
 
-## Registering Apps
+## Registering 
+
+Using `localhost`:
+
 - **cURL**:
    ```shell
    curl -s -X POST \
@@ -22,6 +25,13 @@
    ```shell
    http -f POST \
     :9393/apps \
+    uri=https://dataflow.spring.io/rabbitmq-maven-latest \
+    force=true
+   ```
+   If you are using another server (different from `localhost`) you can do:
+   ```shell
+   http -f POST \
+    https://myserver.com:9393/apps \
     uri=https://dataflow.spring.io/rabbitmq-maven-latest \
     force=true
    ```
