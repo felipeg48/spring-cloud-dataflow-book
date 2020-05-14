@@ -1,12 +1,49 @@
 # Client Tools: cURL, Httpie, jq
 
 
-## Data
+## Movie
 ```json
-{"title":"The Matrix","actor":"Keanu Reeves","year":1999,"genre":"fiction","stars":5}
-{"title":"Memento","actor":"Guy Pearce","year":2000,"genre":"drama","stars":4}
-{"title":"The Prestige","actor":"Christian Bale","year":2006,"genre":"drama","stars":3}
-{"title":"Disturbia","actor":"Shia LaBeouf","year":2007,"genre":"drama","stars":3}
+{
+      "id": "tt0133093",
+   "title": "The Matrix",
+   "actor": "Keanu Reeves",
+    "year": 1999,
+   "genre": "fiction",
+   "stars": 5
+}
+```
+
+## API
+We are going to use: [API Dojo](https://rapidapi.com/user/apidojo) - [IMDB](https://rapidapi.com/apidojo/api/imdb8).
+
+- **GET**: ***title/get-details***
+- **GET**: ***title/get-ratings***
+
+## Transform
+```json
+{
+     "id": "tt0133093",
+  "title": "The Matrix",
+  "actor": "Keanu Reeves",
+   "year": 1999,
+  "genre": "fiction",
+  "stars": 5,
+   "imdb": {
+   	    "image": "https://m.media-amazon.com/images/M/MV5BNzQzOTk3OTAtNDQ0Zi00ZTVkLWI0MTEtMDllZjNkYzNjNTc4L2ltYWdlXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg",
+       "rating": 8.7,
+      "topRank": 16,
+  "ratingCount": 1605968 
+   }
+}
+```
+
+
+## Sample Data
+```json
+{"imdb":"tt0133093","title":"The Matrix","actor":"Keanu Reeves","year":1999,"genre":"fiction","stars":5}
+{"imdb":"tt0209144","title":"Memento","actor":"Guy Pearce","year":2000,"genre":"drama","stars":4}
+{"imdb":"tt0482571","title":"The Prestige","actor":"Christian Bale","year":2006,"genre":"drama","stars":3}
+{"imdb":"tt0486822","title":"Disturbia","actor":"Shia LaBeouf","year":2007,"genre":"drama","stars":3}
 ```
 
 ## Maven Apps
