@@ -3,12 +3,9 @@ package com.apress.cloud.stream.movie;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cloud.dataflow.core.ApplicationType;
-import org.springframework.cloud.dataflow.core.StreamAppDefinition;
 import org.springframework.cloud.dataflow.rest.client.DataFlowOperations;
 import org.springframework.cloud.dataflow.rest.client.DataFlowTemplate;
-import org.springframework.cloud.dataflow.rest.client.dsl.Stream;
 import org.springframework.cloud.dataflow.rest.client.dsl.StreamApplication;
-import org.springframework.cloud.dataflow.rest.client.dsl.StreamBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -42,10 +39,7 @@ public class MovieDslConfiguration {
 
         URI dataFlowUri = URI.create("http://localhost:9393");
         DataFlowOperations dataFlowOperations = new DataFlowTemplate(dataFlowUri);
-
-        //dataFlowOperations.appRegistryOperations().importFromResource(
-        //        "https://dataflow.spring.io/rabbitmq-maven-latest", true);
-
+  
 
         dataFlowOperations.appRegistryOperations().register("http", ApplicationType.source,
                 "maven://org.springframework.cloud.stream.app:http-source-rabbit:2.1.2.RELEASE",
@@ -76,11 +70,6 @@ public class MovieDslConfiguration {
     }
 
     @Bean
-    public StreamBuilder streamBuilder(DataFlowOperations dataFlowOpeations) {
-        return Stream.builder(dataFlowOpeations);
-    }
-
-    @Bean
     public StreamApplication httpSource(){
         return new StreamApplication("http")
                 .addProperty("port",9001);
@@ -107,10 +96,5 @@ public class MovieDslConfiguration {
                 .addProperty("password","\"rootpw\"")
                 .addProperty("driver-class-name","\"org.mariadb.jdbc.Driver\"")
                 .addProperty("url","\"jdbc:mysql://mysql:3306/reviews?autoReconnect=true&useSSL=false\"");
-    }
-
-    @Bean
-    public StreamApplication logSink() {
-        return new StreamApplication("log");
     }
 }
