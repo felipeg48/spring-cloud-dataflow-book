@@ -21,6 +21,9 @@ public class MovieController {
     @PostMapping("/movies")
     @ResponseStatus(HttpStatus.ACCEPTED)
     public ResponseEntity<MovieResponse> toMovieBinding(@RequestBody MovieRequest movieRequest) {
+        assert  movieRequest != null;
+        movieRequest.setCreated(LocalDateTime.now());
+
         log.debug("Sending: {} ", movieRequest);
         assert streamBridge != null;
         streamBridge.send("movie-out-0", movieRequest);

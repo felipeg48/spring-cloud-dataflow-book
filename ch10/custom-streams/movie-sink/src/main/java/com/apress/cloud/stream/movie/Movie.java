@@ -14,4 +14,5 @@ public class Movie {
     private int year;
     private String genre;
     private int stars;
+    private MovieImdb imdb;
 }

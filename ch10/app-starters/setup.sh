@@ -8,7 +8,7 @@ server.port=8081
 
 # Spring Cloud Stream
 spring.cloud.stream.bindings.input.destination=movie
-spring.cloud.stream.bindings.output.destination=log
+spring.cloud.stream.bindings.output.destination=imdb
 
 # Splitter Properties
 splitter.expression=#jsonPath(payload,'$.MovieRequest.movies')
@@ -16,7 +16,7 @@ EOF
 
 cat <<EOF >>log/application.properties
 # Server
-server.port=8082
+server.port=8083
 
 # Spring Cloud Stream
 spring.cloud.stream.bindings.input.destination=log
