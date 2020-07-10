@@ -1,0 +1,46 @@
+{
+  "groups": [
+    {
+      "name": "movie",
+      "type": "com.apress.cloud.stream.movie.MovieProperties",
+      "sourceType": "com.apress.cloud.stream.movie.MovieProperties"
+    },
+    {
+      "name": "spring.nats",
+      "type": "com.apress.nats.NatsProperties",
+      "sourceType": "com.apress.nats.NatsProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "spring.nats.host",
+      "type": "java.lang.String",
+      "description": "This NATs Server host. Default to localhost.",
+      "sourceType": "com.apress.nats.NatsProperties"
+    },
+    {
+      "name": "spring.nats.port",
+      "type": "java.lang.Integer",
+      "description": "This NATs Server port. Default to 4222.",
+      "sourceType": "com.apress.nats.NatsProperties"
+    },
+    {
+      "name": "movie.api-server",
+      "type": "java.lang.String",
+      "description": "This api-server can be obtain in your https://rapidapi.com/ profile.",
+      "sourceType": "com.apress.cloud.stream.movie.MovieProperties"
+    },
+    {
+      "name": "movie.header-host",
+      "type": "java.lang.String",
+      "description": "This header-host can be obtain in your https://rapidapi.com/ profile.",
+      "sourceType": "com.apress.cloud.stream.movie.MovieProperties"
+    },
+    {
+      "name": "movie.header-key",
+      "type": "java.lang.String",
+      "description": "This header-key can be obtain in your https://rapidapi.com/ profile.",
+      "sourceType": "com.apress.cloud.stream.movie.MovieProperties"
+    }
+  ]
+}
