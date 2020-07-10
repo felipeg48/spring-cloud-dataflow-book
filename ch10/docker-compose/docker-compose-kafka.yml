@@ -11,6 +11,14 @@ services:
     expose:
       - 3306
 
+  nats:
+    image: nats
+    container_name: nats
+    expose:
+      - 4222
+      - 6222
+      - 8222
+
   kafka-broker:
     image: confluentinc/cp-kafka:5.3.1
     container_name: dataflow-kafka
@@ -47,6 +55,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=rootpw
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.mariadb.jdbc.Driver
+      - maven.remote-repositories.repo1.url=https://dl.bintray.com/felipeg48/scdf
     depends_on:
       - kafka-broker
     entrypoint: "./wait-for-it.sh mysql:3306 -- java -jar /maven/spring-cloud-dataflow-server.jar"
@@ -66,6 +75,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=rootpw
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.mariadb.jdbc.Driver
+      - maven.remote-repositories.repo1.url=https://dl.bintray.com/felipeg48/scdf
     entrypoint: "./wait-for-it.sh mysql:3306 -- java -Djava.security.egd=file:/dev/./urandom -jar /spring-cloud-skipper-server.jar"
     volumes:
       - ${HOST_MOUNT_PATH:-.}:${DOCKER_MOUNT_PATH:-/root/scdf}

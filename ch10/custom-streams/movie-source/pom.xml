@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.apress.cloud.stream</groupId>
 	<artifactId>movie-source</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>movie-source</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -99,5 +99,15 @@
 			</plugin>
 		</plugins>
 	</build>
+
+
+	<distributionManagement>
+		<repository>
+			<id>bintray-felipeg48-scdf</id>
+			<name>felipeg48-scdf</name>
+			<url>https://api.bintray.com/maven/felipeg48/scdf/movie-streams/;publish=1</url>
+		</repository>
+	</distributionManagement>
+
 
 </project>

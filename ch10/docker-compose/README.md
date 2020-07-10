@@ -1,5 +1,7 @@
 # Using Docker Compose
 
+These files have also **NATs** server included.
+
 - Start Up
 	```shell
 	export DATAFLOW_VERSION=2.5.0.RELEASE
