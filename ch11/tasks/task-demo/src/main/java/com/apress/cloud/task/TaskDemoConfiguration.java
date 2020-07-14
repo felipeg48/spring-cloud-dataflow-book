@@ -1,13 +1,22 @@
 package com.apress.cloud.task;
 
+import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.cloud.task.configuration.EnableTask;
+import org.springframework.cloud.task.listener.TaskExecutionListener;
+import org.springframework.cloud.task.listener.TaskExecutionListenerSupport;
+import org.springframework.cloud.task.listener.annotation.AfterTask;
+import org.springframework.cloud.task.listener.annotation.BeforeTask;
+import org.springframework.cloud.task.listener.annotation.FailedTask;
+import org.springframework.cloud.task.repository.TaskExecution;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 
+@Log4j2
 @EnableTask
 @Configuration
 public class TaskDemoConfiguration {
@@ -28,6 +37,9 @@ public class TaskDemoConfiguration {
     private final String MOVIES_INSERT_SQL_2 = "insert into movies (id,title,actor,year,genre,stars,rating,ratingcount) " +
             "values ('tt0209144','Memento','Guy Pearce',2000,'drama',4,8.4,1090922);";
 
+    private final String MOVIES_INSERT_SQL_ERROR = "insert into movies (year,genre,stars,rating,ratingcount) " +
+            "values ('tt0209144','Memento','Guy Pearce',2000,'drama',4,8.4,1090922);";
+
     @Bean
     public CommandLineRunner process(DataSource dataSource){
         return args -> {
@@ -35,6 +47,12 @@ public class TaskDemoConfiguration {
             jdbcTemplate.execute(MOVIES_TABLE_SQL);
             jdbcTemplate.execute(MOVIES_INSERT_SQL_1);
             jdbcTemplate.execute(MOVIES_INSERT_SQL_2);
+            //jdbcTemplate.execute(MOVIES_INSERT_SQL_ERROR);
         };
+    }
+
+    @Bean
+    public TaskDemoListener taskDemoListener(){
+        return new TaskDemoListener();
     }
 }
