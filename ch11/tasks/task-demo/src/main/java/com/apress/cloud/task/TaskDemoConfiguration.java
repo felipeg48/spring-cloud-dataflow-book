@@ -3,16 +3,9 @@ package com.apress.cloud.task;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.cloud.task.configuration.EnableTask;
-import org.springframework.cloud.task.listener.TaskExecutionListener;
-import org.springframework.cloud.task.listener.TaskExecutionListenerSupport;
-import org.springframework.cloud.task.listener.annotation.AfterTask;
-import org.springframework.cloud.task.listener.annotation.BeforeTask;
-import org.springframework.cloud.task.listener.annotation.FailedTask;
-import org.springframework.cloud.task.repository.TaskExecution;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Component;
 
 import javax.sql.DataSource;
 

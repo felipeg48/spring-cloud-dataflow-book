@@ -43,6 +43,7 @@ public class TaskDemoListener implements TaskExecutionListener {
     @Override
     public void onTaskFailed(TaskExecution taskExecution, Throwable throwable) {
         log.debug("[onTaskFailed] - {}", taskExecution);
+        log.error("[onTaskFailed] - {}", throwable);
     }
 }
 */
