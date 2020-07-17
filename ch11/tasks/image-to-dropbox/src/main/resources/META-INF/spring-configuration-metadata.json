@@ -1,0 +1,16 @@
+{"properties": [
+  {
+    "name": "dropbox.api-key",
+    "description": "This is the DropBox API and MUST be set. You can get this key in the dropbox.com/developers."
+  },
+  {
+    "name": "dropbox.path",
+    "description": "The path wherwe the file will be upload",
+    "defaultValue": "/IMDB/"
+  },
+  {
+    "name": "dropbox.local-tmp-folder",
+    "desciption": "The local Temp file where the file will be pickup and uploaded",
+    "defaultValue": "/tmp/"
+  }
+]}
