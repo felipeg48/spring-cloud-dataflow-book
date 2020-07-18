@@ -1,12 +1,15 @@
 package com.apress.cloud.task;
 
 import lombok.extern.log4j.Log4j2;
-import org.springframework.boot.ApplicationRunner;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
+import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.cloud.task.configuration.EnableTask;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -14,7 +17,7 @@ import javax.sql.DataSource;
 @Log4j2
 @EnableTask
 @Configuration
-@EnableConfigurationProperties(ImageToDropboxProperties.class)
+@EnableConfigurationProperties({ImageToDropboxProperties.class})
 public class ImageToDropboxConfiguration {
 
     @Bean
@@ -39,6 +42,8 @@ public class ImageToDropboxConfiguration {
     @Bean
     public CommandLineRunner process(DataSource dataSource,ImageToDropBoxUtils imageToDropBoxUtils){
         return args -> {
+            log.debug("Connecting to: {} ", dataSource.getConnection().getMetaData().getURL());
+
             JdbcTemplate jdbcTemplate = new JdbcTemplate(dataSource);
             jdbcTemplate.execute(MOVIES_TABLE_SQL);
             jdbcTemplate.execute(MOVIES_INSERT_SQL_1);
@@ -56,5 +61,6 @@ public class ImageToDropboxConfiguration {
             log.debug("URL: {}", url);
             imageToDropBoxUtils.fromUrlToDropBox(url,MEMENTO_ART_ID + ".jpg");
         };
-    }
+    };
+
 }

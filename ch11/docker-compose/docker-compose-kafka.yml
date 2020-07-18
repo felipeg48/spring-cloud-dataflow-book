@@ -1,6 +1,6 @@
 version: '3'
 
-services:
+services:      
   mysql:
     image: mysql:5.7.25
     container_name: dataflow-mysql
@@ -47,6 +47,8 @@ services:
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=rootpw
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.mariadb.jdbc.Driver
+      - maven.remote-repositories.repo1.url=https://dl.bintray.com/felipeg48/scdf
+      - dropbox.api-key=YOURKEY
     depends_on:
       - kafka-broker
     entrypoint: "./wait-for-it.sh mysql:3306 -- java -jar /maven/spring-cloud-dataflow-server.jar"
@@ -66,6 +68,7 @@ services:
       - SPRING_DATASOURCE_USERNAME=root
       - SPRING_DATASOURCE_PASSWORD=rootpw
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.mariadb.jdbc.Driver
+      - maven.remote-repositories.repo1.url=https://dl.bintray.com/felipeg48/scdf
     entrypoint: "./wait-for-it.sh mysql:3306 -- java -Djava.security.egd=file:/dev/./urandom -jar /spring-cloud-skipper-server.jar"
     volumes:
       - ${HOST_MOUNT_PATH:-.}:${DOCKER_MOUNT_PATH:-/root/scdf}
