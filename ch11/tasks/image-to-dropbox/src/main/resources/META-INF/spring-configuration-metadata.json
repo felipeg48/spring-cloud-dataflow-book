@@ -16,7 +16,6 @@
     "defaultValue": "/tmp/",
     "sourceType": "com.apress.cloud.task.ImageToDropboxProperties"
   }
-
 ], "hints":  [
   {
     "name": "dropbox.api-key",
