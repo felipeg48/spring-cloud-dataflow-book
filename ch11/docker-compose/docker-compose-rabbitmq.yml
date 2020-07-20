@@ -30,7 +30,7 @@ services:
       - SPRING_DATASOURCE_PASSWORD=rootpw
       - SPRING_DATASOURCE_DRIVER_CLASS_NAME=org.mariadb.jdbc.Driver
       - maven.remote-repositories.repo1.url=https://dl.bintray.com/felipeg48/scdf
-      - dropbox.api-key=0K7QS43AE1QAAAAAAABOW0-mJv0Z1TBN6KmzORy-G3a8htM-tudCpUoHTiOId_JB
+      - dropbox.api-key=YOUR-TOKEN
     depends_on:
       - rabbitmq
     entrypoint: "./wait-for-it.sh mysql:3306 -- java -jar /maven/spring-cloud-dataflow-server.jar"

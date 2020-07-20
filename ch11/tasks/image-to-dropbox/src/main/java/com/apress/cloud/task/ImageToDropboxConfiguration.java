@@ -1,15 +1,11 @@
 package com.apress.cloud.task;
 
 import lombok.extern.log4j.Log4j2;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
-import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.cloud.task.configuration.EnableTask;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -21,8 +17,8 @@ import javax.sql.DataSource;
 public class ImageToDropboxConfiguration {
 
     @Bean
-    public ImageToDropBoxUtils imageToDropBoxUtils(ImageToDropboxProperties imageToDropboxProperties){
-        return new ImageToDropBoxUtils(imageToDropboxProperties);
+    public ImageToDropboxUtils imageToDropBoxUtils(ImageToDropboxProperties imageToDropboxProperties){
+        return new ImageToDropboxUtils(imageToDropboxProperties);
     }
 
     private final String MOVIES_TABLE_SQL = "CREATE TABLE IF NOT EXISTS art(" +
@@ -40,7 +36,7 @@ public class ImageToDropboxConfiguration {
     private final String MEMENTO_ART_ID = "tt0209144";
 
     @Bean
-    public CommandLineRunner process(DataSource dataSource,ImageToDropBoxUtils imageToDropBoxUtils){
+    public CommandLineRunner process(DataSource dataSource, ImageToDropboxUtils imageToDropBoxUtils){
         return args -> {
             log.debug("Connecting to: {} ", dataSource.getConnection().getMetaData().getURL());
 

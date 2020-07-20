@@ -15,12 +15,12 @@ import java.io.InputStream;
 import java.net.URL;
 
 @Log4j2
-public class ImageToDropBoxUtils {
+public class ImageToDropboxUtils {
 
     private ImageToDropboxProperties imageToDropboxProperties;
     private DbxClientV2 client;
 
-    public ImageToDropBoxUtils(ImageToDropboxProperties imageToDropboxProperties){
+    public ImageToDropboxUtils(ImageToDropboxProperties imageToDropboxProperties){
         this.imageToDropboxProperties = imageToDropboxProperties;
         DbxRequestConfig config = DbxRequestConfig.newBuilder("dropbox/scdf-imdb").build();
         this. client = new DbxClientV2(config, this.imageToDropboxProperties.getApiKey());
