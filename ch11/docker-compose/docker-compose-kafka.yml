@@ -11,6 +11,14 @@ services:
     expose:
       - 3306
 
+  nats:
+    image: nats
+    container_name: nats
+    expose:
+      - 4222
+      - 6222
+      - 8222
+
   kafka-broker:
     image: confluentinc/cp-kafka:5.3.1
     container_name: dataflow-kafka
@@ -61,6 +69,7 @@ services:
     ports:
       - "7577:7577"
       - "20000-20105:20000-20105"
+      - "8080-8089:8080-8089"
     environment:
       - SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_LOCAL_ACCOUNTS_DEFAULT_PORTRANGE_LOW=20000
       - SPRING_CLOUD_SKIPPER_SERVER_PLATFORM_LOCAL_ACCOUNTS_DEFAULT_PORTRANGE_HIGH=20100

@@ -1,10 +1,10 @@
-package com.apress.cloud.stream;
+package com.apress.cloud.stream.movie;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MovieBatchApplicationTests {
+class MovieDetailsApplicationTests {
 
 	@Test
 	void contextLoads() {

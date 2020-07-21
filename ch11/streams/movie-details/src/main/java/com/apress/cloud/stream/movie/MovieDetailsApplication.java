@@ -1,13 +1,13 @@
-package com.apress.cloud.stream;
+package com.apress.cloud.stream.movie;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MovieBatchApplication {
+public class MovieDetailsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MovieBatchApplication.class, args);
+		SpringApplication.run(MovieDetailsApplication.class, args);
 	}
 
 }

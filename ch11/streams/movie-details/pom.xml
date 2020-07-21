@@ -8,10 +8,10 @@
 		<version>2.3.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.apress.cloud.batch</groupId>
-	<artifactId>movie-batch</artifactId>
+	<groupId>com.apress.cloud.stream</groupId>
+	<artifactId>movie-details</artifactId>
 	<version>0.0.1</version>
-	<name>movie-batch</name>
+	<name>movie-details</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -21,38 +21,32 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-batch</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream</artifactId>
 		</dependency>
+
+		<!--
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-task</artifactId>
 		</dependency>
+		-->
 
-		<!-- DropBox -->
 		<dependency>
-			<groupId>com.dropbox.core</groupId>
-			<artifactId>dropbox-core-sdk</artifactId>
-			<version>3.1.4</version>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-binder-rabbit</artifactId>
 		</dependency>
 
-		<!-- Apache Commons IO -->
+		<!-- Apache Commons -->
 		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.7</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
-			<scope>runtime</scope>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.5.12</version>
 		</dependency>
 
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
 		</dependency>
 
 		<dependency>
@@ -60,13 +54,11 @@
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-configuration-processor</artifactId>
 			<optional>true</optional>
 		</dependency>
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
@@ -79,8 +71,8 @@
 			</exclusions>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.batch</groupId>
-			<artifactId>spring-batch-test</artifactId>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-stream-test-support</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -120,14 +112,13 @@
 			</plugin>
 
 		</plugins>
-
 	</build>
 
 	<distributionManagement>
 		<repository>
 			<id>bintray-felipeg48-scdf</id>
 			<name>felipeg48-scdf</name>
-			<url>https://api.bintray.com/maven/felipeg48/scdf/movie-tasks/;publish=1</url>
+			<url>https://api.bintray.com/maven/felipeg48/scdf/movie-streams/;publish=1</url>
 		</repository>
 	</distributionManagement>
 
