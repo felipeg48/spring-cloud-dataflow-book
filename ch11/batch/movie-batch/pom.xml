@@ -50,12 +50,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>com.h2database</groupId>
-			<artifactId>h2</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-
-		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
 			<optional>true</optional>
@@ -103,22 +97,6 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-
-			<plugin>
-				<groupId>org.springframework.cloud</groupId>
-				<artifactId>spring-cloud-app-starter-metadata-maven-plugin</artifactId>
-				<version>2.0.0.RELEASE</version>
-				<executions>
-					<execution>
-						<id>aggregate-metadata</id>
-						<phase>compile</phase>
-						<goals>
-							<goal>aggregate-metadata</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
 		</plugins>
 
 	</build>
