@@ -48,6 +48,11 @@
 			<artifactId>prometheus-rsocket-spring</artifactId>
 			<version>1.0.0</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud.stream.app</groupId>
+			<artifactId>app-starters-micrometer-common</artifactId>
+			<version>2.1.4.RELEASE</version>
+		</dependency>
 
 		<!-- Apache Commons -->
 		<dependency>
@@ -112,15 +117,6 @@
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-app-starter-metadata-maven-plugin</artifactId>
 				<version>2.0.0.RELEASE</version>
-				<executions>
-					<execution>
-						<id>aggregate-metadata</id>
-						<phase>compile</phase>
-						<goals>
-							<goal>aggregate-metadata</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 
 		</plugins>

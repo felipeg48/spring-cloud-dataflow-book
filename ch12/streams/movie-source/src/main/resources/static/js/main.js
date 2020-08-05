@@ -40,6 +40,10 @@ $(function(){
             data: $('#movieRequest').val(),
             success: function (data) {
                 alert(data.MovieResponse.message);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                alert(xhr.status);
+                alert(thrownError);
             }
         })
     });

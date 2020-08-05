@@ -1,9 +1,5 @@
 app.movie-web.server.port=9095
 app.movie-web.spring.cloud.stream.bindings.output.destination=movie
-app.movie-web.management.metrics.export.prometheus.enabled=true
-app.movie-web.management.metrics.export.prometheus.rsocket.enabled=true
-app.movie-web.management.metrics.export.prometheus.rsocket.host=prometheus-rsocket-proxy
-app.movie-web.management.metrics.export.prometheus.rsocket.port=7001
 app.splitter.expression=#jsonPath(payload,'$.MovieRequest.movies')
 app.splitter.spring.cloud.stream.bindings.input.destination=movie
 app.splitter.spring.cloud.stream.bindings.output.destination=imdb
