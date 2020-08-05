@@ -2,8 +2,8 @@
 
 - Start Up
 	```shell
-	export DATAFLOW_VERSION=2.5.0.RELEASE
-	export SKIPPER_VERSION=2.4.0.RELEASE
+	export DATAFLOW_VERSION=2.6.0
+	export SKIPPER_VERSION=2.5.0
 	docker-compose -f docker-compose-rabbitmq.yml up
 	```
 - Shutdown

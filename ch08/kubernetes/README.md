@@ -4,9 +4,9 @@
 
 The versions used are:
 
-- Spring Cloud Data Flow: 2.5.0.RELEASE
-- Spring Cloud Skipper: 2.4.0.RELEASE
-- Grafana/Prometheus: 2.5.0.RELEASE
+- Spring Cloud Data Flow: 2.6.0
+- Spring Cloud Skipper: 2.5.0
+- Grafana/Prometheus: 2.5.2.RELEASE
 
 1. Go into the folder (depending on your needs) and execute the following commands:
 

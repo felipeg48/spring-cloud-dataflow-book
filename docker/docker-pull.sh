@@ -1,8 +1,8 @@
 #!/bin/sh
 
 ## Data Flow Servers 
-docker pull springcloud/spring-cloud-dataflow-server:2.5.0.RELEASE
-docker pull springcloud/spring-cloud-skipper-server:2.4.0.RELEASE
+docker pull springcloud/spring-cloud-dataflow-server:2.6.0
+docker pull springcloud/spring-cloud-skipper-server:2.5.0
 
 ## Middleware
 docker pull mysql:5.7.25
@@ -14,7 +14,7 @@ docker pull bitnami/kafka:latest
 docker pull nats:latest
 
 ## Monitoring
-docker pull springcloud/spring-cloud-dataflow-grafana-prometheus:2.5.0.RELEASE
+docker pull springcloud/spring-cloud-dataflow-grafana-prometheus:2.5.2.RELEASE
 docker pull prom/prometheus:v2.12.0
 docker pull micrometermetrics/prometheus-rsocket-proxy:latest
 
