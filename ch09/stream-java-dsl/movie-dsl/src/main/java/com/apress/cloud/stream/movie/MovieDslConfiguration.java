@@ -15,7 +15,7 @@ import java.net.URI;
 public class MovieDslConfiguration {
 
     @Bean
-    public DataFlowOperations dataFlowOpeations(){
+    public DataFlowOperations dataFlowOperations(){
 
         URI dataFlowUri = URI.create("http://localhost:9393");
         DataFlowOperations dataFlowOperations = new DataFlowTemplate(dataFlowUri);
@@ -37,8 +37,8 @@ public class MovieDslConfiguration {
     }
 
     @Bean
-    public MovieDslService movieDslService(DataFlowOperations dataFlowOpeations){
-        return new MovieDslService(dataFlowOpeations);
+    public MovieDslService movieDslService(DataFlowOperations dataFlowOperations){
+        return new MovieDslService(dataFlowOperations);
     }
 
 }

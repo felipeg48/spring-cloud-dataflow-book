@@ -1,5 +1,5 @@
 #!/bin/sh
-java -jar spring-cloud-skipper-server-2.3.2.RELEASE.jar \
+java -jar spring-cloud-skipper-server-2.5.0.jar \
 --spring.datasource.url=jdbc:mysql://localhost:3306/dataflow \
 --spring.datasource.username=root \
 --spring.datasource.password=rootpw \

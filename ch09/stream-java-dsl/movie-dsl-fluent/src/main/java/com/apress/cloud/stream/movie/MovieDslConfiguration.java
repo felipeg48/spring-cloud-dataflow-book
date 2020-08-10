@@ -28,14 +28,14 @@ public class MovieDslConfiguration {
     }
 
     @Bean
-    public MovieDslService movieDslService(DataFlowOperations dataFlowOpeations,
+    public MovieDslService movieDslService(DataFlowOperations dataFlowOperations,
                                            StreamApplication httpSource,StreamApplication splitterProcessor,StreamApplication groovyTransformProcessor,
                                            StreamApplication jdbcSink, StreamApplication logSink){
-        return new MovieDslService(dataFlowOpeations,httpSource,splitterProcessor,groovyTransformProcessor,jdbcSink);
+        return new MovieDslService(dataFlowOperations,httpSource,splitterProcessor,groovyTransformProcessor,jdbcSink);
     }
 
     @Bean
-    public DataFlowOperations dataFlowOpeations(){
+    public DataFlowOperations dataFlowOperations(){
 
         URI dataFlowUri = URI.create("http://localhost:9393");
         DataFlowOperations dataFlowOperations = new DataFlowTemplate(dataFlowUri);
