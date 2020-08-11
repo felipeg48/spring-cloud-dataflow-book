@@ -42,28 +42,28 @@ public class MovieDslConfiguration {
   
 
         dataFlowOperations.appRegistryOperations().register("http", ApplicationType.source,
-                "maven://org.springframework.cloud.stream.app:http-source-rabbit:2.1.2.RELEASE",
-                "maven://org.springframework.cloud.stream.app:http-source-rabbit:jar:metadata:2.1.2.RELEASE",
+                "maven://org.springframework.cloud.stream.app:http-source-rabbit:2.1.4.RELEASE",
+                "maven://org.springframework.cloud.stream.app:http-source-rabbit:jar:metadata:2.1.4.RELEASE",
                 true);
         dataFlowOperations.appRegistryOperations().register("splitter", ApplicationType.processor,
-                "maven://org.springframework.cloud.stream.app:splitter-processor-rabbit:2.1.2.RELEASE",
-                "maven://org.springframework.cloud.stream.app:splitter-processor-rabbit:jar:metadata:2.1.2.RELEASE",
+                "maven://org.springframework.cloud.stream.app:splitter-processor-rabbit:2.1.3.RELEASE",
+                "maven://org.springframework.cloud.stream.app:splitter-processor-rabbit:jar:metadata:2.1.3.RELEASE",
                 true);
         dataFlowOperations.appRegistryOperations().register("groovy-transform", ApplicationType.processor,
-                "maven://org.springframework.cloud.stream.app:groovy-transform-processor-rabbit:2.1.2.RELEASE",
-                "maven://org.springframework.cloud.stream.app:groovy-transform-processor-rabbit:jar:metadata:2.1.2.RELEASE",
+                "maven://org.springframework.cloud.stream.app:groovy-transform-processor-rabbit:2.1.3.RELEASE",
+                "maven://org.springframework.cloud.stream.app:groovy-transform-processor-rabbit:jar:metadata:2.1.3.RELEASE",
                 true);
         dataFlowOperations.appRegistryOperations().register("filter", ApplicationType.processor,
-                "maven://org.springframework.cloud.stream.app:filter-processor-rabbit:2.1.2.RELEASE",
-                "maven://org.springframework.cloud.stream.app:filter-processor-rabbit:jar:metadata:2.1.2.RELEASE",
+                "maven://org.springframework.cloud.stream.app:filter-processor-rabbit:2.1.3.RELEASE",
+                "maven://org.springframework.cloud.stream.app:filter-processor-rabbit:jar:metadata:2.1.3.RELEASE",
                 true);
         dataFlowOperations.appRegistryOperations().register("jdbc", ApplicationType.sink,
-                "maven://org.springframework.cloud.stream.app:jdbc-sink-rabbit:2.1.4.RELEASE",
-                "maven://org.springframework.cloud.stream.app:jdbc-sink-rabbit:jar:metadata:2.1.4.RELEASE",
+                "maven://org.springframework.cloud.stream.app:jdbc-sink-rabbit:2.1.6.RELEASE",
+                "maven://org.springframework.cloud.stream.app:jdbc-sink-rabbit:jar:metadata:2.1.6.RELEASE",
                 true);
         dataFlowOperations.appRegistryOperations().register("log", ApplicationType.sink,
-                "maven://org.springframework.cloud.stream.app:log-sink-rabbit:2.1.3.RELEASE",
-                "maven://org.springframework.cloud.stream.app:log-sink-rabbit:jar:metadata:2.1.3.RELEASE",
+                "maven://org.springframework.cloud.stream.app:log-sink-rabbit:2.1.4.RELEASE",
+                "maven://org.springframework.cloud.stream.app:log-sink-rabbit:jar:metadata:2.1.4.RELEASE",
                 true);
 
         return dataFlowOperations;

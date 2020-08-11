@@ -35,7 +35,7 @@ public class Movie {
 
     public String toString(){
         StringBuilder builder = new StringBuilder();
-        builder.append("Movie(tile: ");
+        builder.append("Movie(title: ");
         builder.append(title);
         builder.append(", actor: ");
         builder.append(actor);

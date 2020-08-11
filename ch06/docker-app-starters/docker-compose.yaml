@@ -7,7 +7,7 @@ services:
       - app-starters
 
   http:
-    image: "springcloudstream/http-source-rabbit:2.1.1.RELEASE"
+    image: "springcloudstream/http-source-rabbit:2.1.4.RELEASE"
     container_name: http
     environment:
       - spring.cloud.stream.bindings.output.destination=http
@@ -18,7 +18,7 @@ services:
       - app-starters
 
   filter:
-    image: "springcloudstream/filter-processor-rabbit:2.1.1.RELEASE"
+    image: "springcloudstream/filter-processor-rabbit:2.1.3.RELEASE"
     container_name: filter
     environment:
       - spring.cloud.stream.bindings.input.destination=http
@@ -29,7 +29,7 @@ services:
       - app-starters
   
   transform:
-    image: "springcloudstream/groovy-transform-processor-rabbit:2.1.1.RELEASE"
+    image: "springcloudstream/groovy-transform-processor-rabbit:2.1.3.RELEASE"
     container_name: transform
     environment:
       - spring.cloud.stream.bindings.input.destination=transform
@@ -42,7 +42,7 @@ services:
       - app-starters
 
   log:
-    image: "springcloudstream/log-sink-rabbit:2.1.2.RELEASE"
+    image: "springcloudstream/log-sink-rabbit:2.1.4.RELEASE"
     container_name: log
     environment:
       - spring.cloud.stream.bindings.input.destination=log
